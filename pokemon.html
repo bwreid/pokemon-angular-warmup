@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="large-12 columns">
+    <br>
+    <h2 style="text-align: center;">
+      Generate a random Pokemon!
+    </h2>
+    <br>
+    <button ng-click="$ctrl.generatePokemon()" class="button expand">
+      Generate
+    </button>
+    <div style="text-align: center">
+      <img height="25%" width="25%"
+        ng-show="!$ctrl.pokemon.name && $ctrl.loading"
+        src="https://d13yacurqjgara.cloudfront.net/users/12755/screenshots/1037374/hex-loader2.gif" alt="loading">
+      <img ng-show="$ctrl.pokemon.name" ng-src="{{ $ctrl.pokemon.img }}"
+           alt="{{ $ctrl.pokemon.name }}">
+      <h3 ng-show="$ctrl.pokemon.name">
+        {{ $ctrl.pokemon.name }}
+      </h3>
+    </div>
+  </div>
+</div>
